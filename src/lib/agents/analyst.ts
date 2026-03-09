@@ -99,7 +99,7 @@ For each evidence item, determine if it's directly relevant to answering the pre
 const NicheSchema = z.object({
   niche: z.array(z.object({
     id: z.string(),
-    authority: z.number().min(0).max(1),
+    authority: z.number().describe('Niche authority score (0-1)'),
     rationale: z.string().describe('Why this source is considered niche-credible for this topic')
   }))
 });

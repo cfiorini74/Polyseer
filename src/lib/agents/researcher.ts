@@ -38,11 +38,11 @@ const EvidenceItemSchema = z.object({
   urls: z.array(z.string()).describe('Source URLs from search results (empty array if no sources)'),
   originId: z.string().describe('Source identifier for deduplication'),
   firstReport: z.boolean().default(false).describe('Whether this is the first report of this information'),
-  verifiability: z.number().min(0).max(1).describe('How verifiable this claim is (0-1)'),
-  corroborationsIndep: z.number().int().min(0).describe('Number of independent corroborations'),
-  consistency: z.number().min(0).max(1).describe('Internal logical consistency (0-1)'),
+  verifiability: z.number().describe('How verifiable this claim is (0-1)'),
+  corroborationsIndep: z.number().describe('Number of independent corroborations (integer, 0 or more)'),
+  consistency: z.number().describe('Internal logical consistency (0-1)'),
   pathway: z.string().optional().describe('Causal pathway/catalyst category (e.g., platform-policy, release/tour, viral, award/media, regulatory)'),
-  connectionStrength: z.number().min(0).max(1).optional().describe('Strength of linkage between this signal and the predicted outcome')
+  connectionStrength: z.number().optional().describe('Strength of linkage between this signal and the predicted outcome (0-1)')
 });
 
 const EvidenceSchema = z.object({

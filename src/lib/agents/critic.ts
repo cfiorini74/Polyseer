@@ -17,7 +17,7 @@ const CritiqueSchemaRaw = z.object({
   })).describe('targeted searches to fill identified gaps (provide up to 10)'),
   correlationAdjustments: z.array(z.object({
     clusterId: z.string().describe('originId of the evidence cluster (e.g. "reuters-001")'),
-    correlation: z.number().min(0).max(1).describe('correlation value 0-1')
+    correlation: z.number().describe('correlation value (0-1)')
   })).describe('suggested correlation adjustments for evidence clusters that seem related'),
   confidenceIssues: z.array(z.string()).describe('factors that should reduce confidence in the forecast')
 });
