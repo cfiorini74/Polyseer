@@ -6,7 +6,7 @@ import { getSmallModel } from '../models';
 const getModelSmall = () => getSmallModel();
 
 const DriversSchema = z.object({
-  drivers: z.array(z.string()).min(3).max(5).describe('Key factors that could influence the outcome (3-8 concise factors)'),
+  drivers: z.array(z.string()).describe('Key factors that could influence the outcome (provide 3-5 concise factors)'),
   reasoning: z.string().describe('Brief explanation of why these drivers were selected')
 });
 
