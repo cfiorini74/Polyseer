@@ -1,10 +1,10 @@
 import { generateObject } from 'ai';
 import { z } from 'zod';
-import { openai } from '@ai-sdk/openai';
 import { Evidence } from '../forecasting/types';
+import { getLargeModel } from '../models';
 
 // Model helper
-const getModel = () => openai('gpt-4o');
+const getModel = () => getLargeModel();
 
 export const CritiqueSchema = z.object({
   missing: z.array(z.string()).describe('missed disconfirming evidence or failure modes'),
