@@ -271,10 +271,12 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 # LLM Provider (choose one)
 # ===========================================
 # Option A: OpenAI (default)
+# Get your OpenAI API key at: https://platform.openai.com
 # LLM_PROVIDER=openai
 # OPENAI_API_KEY=sk-your_openai_api_key_here
 
 # Option B: Anthropic/Claude
+# Get your Anthropic API key at: https://console.anthropic.com
 # LLM_PROVIDER=anthropic
 # ANTHROPIC_API_KEY=sk-ant-your_anthropic_api_key_here
 
