@@ -6,7 +6,7 @@ import { getLargeModel } from '../models';
 // Model helper
 const getModel = () => getLargeModel();
 
-const CritiqueSchemaRaw = z.object({
+export const CritiqueSchemaRaw = z.object({
   missing: z.array(z.string()).describe('missed disconfirming evidence or failure modes'),
   duplicationFlags: z.array(z.string()).describe('evidence ids suspected duplicate wiring'),
   dataConcerns: z.array(z.string()).describe('measurement or selection bias risks'),
